@@ -1,0 +1,56 @@
+---
+const {AtractionName, AtractionDescription, AtractionImage} = Astro.props;
+---
+
+<div class="atraccion">
+    <img src="AtractionImage" alt="Casa Encantada">
+    <h3>{AtractionName}</h3>
+    <p>{AtractionDescription}</p>
+</div>
+
+<style>
+    .atracciones h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.zona {
+    margin-bottom: 3rem;
+}
+
+.zona h2 {
+    font-size: 2rem;
+    color: #ff7e5f;
+    margin-bottom: 1rem;
+}
+
+.atraccion {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.atraccion img {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.atraccion h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.atraccion p {
+    font-size: 1rem;
+    color: #666;
+}
+</style>
