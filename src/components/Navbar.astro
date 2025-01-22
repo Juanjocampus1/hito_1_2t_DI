@@ -1,19 +1,21 @@
 ---
+import Index from "../pages/index.astro"
+
 const itemsNav = [
     {
-        name: "atraccioes"
+        name: "Atracciones"
     },
     {
-        name: "galeria"
+        name: "Galeria"
     },
         {
-        name: "contacto"
+        name: "Contacto"
     },
     {
         name: "noticias"
     },
     {
-        name: "entrada"
+        name: "Entradas"
     }
 ]
 ---
@@ -22,7 +24,7 @@ const itemsNav = [
     <!-- Header Content -->
     <div class="flex justify-between items-center">
         <!-- Logo -->
-        <div class="text-xl font-bold uppercase">Parque Lucra</div>
+        <div class="text-xl font-bold uppercase"><a href="/">Parque Lucra</a></div>
 
         <button @click="open = !open" class="sm:hidden block text-white focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,8 +36,8 @@ const itemsNav = [
             <ul class="flex space-x-6">
                 {
                     itemsNav.map(({name}) => (
-                        <li>
-                            <a href={`#${name}`}>{name}</a>
+                        <li class="font-semibold">
+                            <a href={`/${name}`}>{name}</a>
                         </li>
                     ))
                 }
@@ -48,7 +50,7 @@ const itemsNav = [
             {
                 itemsNav.map(({name}) => (
                     <li class=" font-semibold">
-                        <a href={`#${name}`} class="capitalize hover:underline">{name}</a>
+                        <a href={`/${name}`} class="capitalize hover:underline">{name}</a>
                     </li>
                 ))
             }
