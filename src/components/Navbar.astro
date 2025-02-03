@@ -1,0 +1,59 @@
+---
+import Index from "../pages/index.astro"
+
+const itemsNav = [
+    {
+        name: "Atracciones"
+    },
+    {
+        name: "Galeria"
+    },
+        {
+        name: "Contacto"
+    },
+    {
+        name: "noticias"
+    },
+    {
+        name: "Entradas"
+    }
+]
+---
+
+<div x-data="{ open: false }" class="bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] text-white py-4 px-6">
+    <!-- Header Content -->
+    <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-xl font-bold uppercase"><a href="/">Parque Lucra</a></div>
+
+        <button @click="open = !open" class="sm:hidden block text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <nav class="hidden sm:block">
+            <ul class="flex space-x-6">
+                {
+                    itemsNav.map(({name}) => (
+                        <li class="font-semibold">
+                            <a href={`/${name}`}>{name}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
+    </div>
+    
+    <nav x-show="open" class="sm:hidden mt-4">
+        <ul class="flex flex-col space-y-2">
+            {
+                itemsNav.map(({name}) => (
+                    <li class=" font-semibold">
+                        <a href={`/${name}`} class="capitalize hover:underline">{name}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
+</div>

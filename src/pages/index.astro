@@ -1,0 +1,22 @@
+---
+import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
+import MainContent from '../components/MainContent.astro';
+import Navbar from '../components/Navbar.astro';
+import Coments from '../components/Coments.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<MainContent/>
+	<section>
+		<Card title="Atracciones" text="Descubre nuestras atracciones por zonas y edades."/>
+		<Card title="Galería" text="Explora imágenes de nuestro parque y vive la experiencia."/>
+		<Card title="Contacto" text="Ponte en contacto para grupos y eventos especiales."/>
+		<Card title="Noticias y Eventos" text="Mantente informado sobre nuestras novedades y próximos eventos."/>
+		<Card title="Entradas y Horarios" text="Consulta nuestros horarios y compra tus entradas online."/>
+	</section>
+	<section class="container mx-auto mb-10 px-6">
+		<Coments/>
+	</section>
+</Layout>

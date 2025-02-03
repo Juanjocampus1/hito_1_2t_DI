@@ -1,0 +1,32 @@
+<footer>
+    <p>© <span id="current-year"></span> Parque lucra | <a href="#politicas">Políticas de Privacidad</a></p>
+    <div class="social">
+        <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+        <a href="https://twitter.com" aria-label="Twitter">Twitter</a>
+        <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    footer .social a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+    }
+
+    footer .social a:hover {
+        color: #ff7e5f;
+    }
+</style>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

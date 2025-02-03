@@ -1,0 +1,193 @@
+<section class="contact-section">
+    <h1>Contáctanos</h1>
+    <p>¡Queremos saber de ti! Completa el formulario o visítanos en nuestras redes sociales.</p>
+
+    <div class="contact-container">
+        <!-- Formulario de Contacto -->
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="contact-btn">Enviar Mensaje</button>
+        </form>
+
+        <!-- Información de Contacto y Redes Sociales -->
+        <div class="contact-info">
+            <h2>Información de Contacto</h2>
+            <p><strong>Dirección:</strong> 123 Calle de la Diversión, Ciudad de la Aventura</p>
+            <p><strong>Teléfono:</strong> +34 123 456 789</p>
+            <p><strong>Email:</strong> info@parquefamiliar.com</p>
+
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><img src="/public/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="/public/Instagram_icon.png.webp" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="/public//twitter-icon-free-png.webp" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Contact Section */
+.contact-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, #ffecd2, #fcb69f);
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form, .contact-info {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+.contact-form:hover,
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 5px rgba(255, 126, 95, 0.4);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+    transform: translateY(-2px);
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ff7e5f;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ff7e5f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #feb47b;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>

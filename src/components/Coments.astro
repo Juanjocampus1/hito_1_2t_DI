@@ -1,0 +1,52 @@
+---
+const ComentsInfo = [
+    {
+        name: "Juan Pérez",
+        roll: "Visitante",
+        coment: "Una experiencia increíble, el parque es hermoso y bien cuidado."
+    },
+    {
+        name: "María López",
+        roll: "Visitante",
+        coment: "Mis hijos se divirtieron mucho, definitivamente volveremos."
+    },
+    {
+        name: "Carlos García",
+        roll: "Visitante",
+        coment: "Excelente lugar para pasar el día en familia."
+    },
+    {
+        name: "Ana Martínez",
+        roll: "Visitante",
+        coment: "La comida es deliciosa y las atracciones son muy divertidas."
+    },
+    {
+        name: "Pedro Rodríguez",
+        roll: "Visitante",
+        coment: "¡La montaña rusa es la mejor que he probado! ¡Volveré pronto!"
+    },
+    {
+        name: "Laura Sánchez",
+        roll: "Visitante",
+        coment: "Un lugar mágico, con atracciones para todas las edades."
+    }
+]
+---
+
+<section class="container mx-auto mt-10 px-6">
+    <h2 class="text-3xl font-bold text-gray-800 text-center">Testimonios</h2>
+    <p class="text-gray-600 text-center mt-2">Lo que nuestros visitantes dicen sobre nosotros</p>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+            ComentsInfo.map(coment => (
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600">"{coment.coment}"</p>
+                    <div class="mt-4">
+                        <p class="text-gray-800 font-bold">{coment.name}</p>
+                        <p class="text-gray-600 text-sm">{coment.roll}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

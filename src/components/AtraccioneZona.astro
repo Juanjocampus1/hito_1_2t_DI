@@ -1,0 +1,306 @@
+---
+// filepath: /c:/Users/CampusFP/Desktop/hito_1_2t_DI-master/src/components/AtraccioneZona.astro
+const attractions = [
+{
+    nombre: "Montaña Rusa Extrema",
+    descripcion: "Una emocionante montaña rusa con giros y caídas vertiginosas.",
+    ubicacion: "Zona Aventura",
+    edad: "12+",
+    altura: "1.40m",
+    tiempo: "2 min",
+    horario: "10:00 - 22:00",
+    imagen: "red_foce.jpg",
+    tipo: "Montaña Rusa"
+  },
+  {
+    nombre: "Casa Encantada",
+    descripcion: "Un recorrido aterrador por una mansión embrujada llena de sorpresas.",
+    ubicacion: "Zona Misterio",
+    edad: "8+",
+    altura: "1.20m",
+    tiempo: "5 min",
+    horario: "11:00 - 21:00",
+    imagen: "images.jpg",
+    tipo: "Atracción Temática"
+  },
+  {
+    nombre: "Carrusel Mágico",
+    descripcion: "Un clásico carrusel con caballos de colores y música encantadora.",
+    ubicacion: "Zona Infantil",
+    edad: "Todas las edades",
+    altura: "Cualquier altura",
+    tiempo: "3 min",
+    horario: "09:00 - 20:00",
+    imagen: "36424110202_71dd1b07ef_b.jpg",
+    tipo: "Atracción Infantil"
+  },
+  {
+    nombre: "Torre del Terror",
+    descripcion: "Una caída libre desde 60 metros de altura.",
+    ubicacion: "Zona Adrenalina",
+    edad: "14+",
+    altura: "1.50m",
+    tiempo: "1 min",
+    horario: "10:30 - 22:30",
+    imagen: "tower-of-terror-disneyland-paris.jpeg",
+    tipo: "Caída Libre"
+  },
+  {
+    nombre: "Río Salvaje",
+    descripcion: "Un paseo en balsas por rápidos y cascadas.",
+    ubicacion: "Zona Acuática",
+    edad: "6+",
+    altura: "1.10m",
+    tiempo: "4 min",
+    horario: "10:00 - 21:00",
+    imagen: "images6.jpg",
+    tipo: "Atracción Acuática"
+  },
+  {
+    nombre: "Simulador Espacial",
+    descripcion: "Vive una experiencia intergaláctica en nuestro simulador de vuelo espacial.",
+    ubicacion: "Zona Futuro",
+    edad: "10+",
+    altura: "1.30m",
+    tiempo: "6 min",
+    horario: "12:00 - 23:00",
+    imagen: "maxresdefault.jpg",
+    tipo: "Simulador"
+  },
+  {
+    nombre: "Autos de Choque",
+    descripcion: "Compite con tus amigos en una pista de autos de choque.",
+    ubicacion: "Zona Familiar",
+    edad: "4+",
+    altura: "1.00m",
+    tiempo: "3 min",
+    horario: "09:30 - 21:30",
+    imagen: "images7).jpg",
+    tipo: "Atracción Mecánica"
+  },
+  {
+    nombre: "Túnel del Tiempo",
+    descripcion: "Viaja al pasado y al futuro en este túnel de efectos especiales.",
+    ubicacion: "Zona Misterio",
+    edad: "8+",
+    altura: "1.20m",
+    tiempo: "5 min",
+    horario: "11:00 - 20:00",
+    imagen: "image8.jpg",
+    tipo: "Atracción Temática"
+  },
+  {
+    nombre: "Vuelo del Dragón",
+    descripcion: "Una atracción suspendida que simula el vuelo de un dragón sobre el parque.",
+    ubicacion: "Zona Fantasía",
+    edad: "10+",
+    altura: "1.40m",
+    tiempo: "3 min",
+    horario: "10:00 - 22:00",
+    imagen: "image9.png",
+    tipo: "Atracción Aérea"
+  },
+  {
+    nombre: "Expedición Jurásica",
+    descripcion: "Un safari en vehículos por un mundo lleno de dinosaurios animatrónicos.",
+    ubicacion: "Zona Prehistórica",
+    edad: "6+",
+    altura: "1.10m",
+    tiempo: "7 min",
+    horario: "09:00 - 19:00",
+    imagen: "/images/expedicion-jurasica.jpg",
+    tipo: "Atracción Temática"
+  }
+];
+---
+
+<div class="filters mb-6">
+  <input
+    type="text"
+    id="search"
+    placeholder="Buscar por nombre"
+    class="p-2 border rounded"
+  />
+  <input
+    type="number"
+    id="minAge"
+    placeholder="Edad mínima"
+    class="p-2 border rounded ml-4"
+  />
+  <select
+    id="zone"
+    class="p-2 border rounded ml-4"
+  >
+    <option value="">Todas las zonas</option>
+    <option value="Zona Aventura">Zona Aventura</option>
+    <option value="Zona Misterio">Zona Misterio</option>
+    <option value="Zona Infantil">Zona Infantil</option>
+    <option value="Zona Adrenalina">Zona Adrenalina</option>
+  </select>
+</div>
+
+<div id="attractions-container" class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Atracciones se renderizarán aquí -->
+</div>
+
+<script>
+  const attractions = [
+  {
+    nombre: "Montaña Rusa Extrema",
+    descripcion: "Una emocionante montaña rusa con giros y caídas vertiginosas.",
+    ubicacion: "Zona Aventura",
+    edad: "12+",
+    altura: "1.40m",
+    tiempo: "2 min",
+    horario: "10:00 - 22:00",
+    imagen: "red_foce.jpg",
+    tipo: "Montaña Rusa"
+  },
+  {
+    nombre: "Casa Encantada",
+    descripcion: "Un recorrido aterrador por una mansión embrujada llena de sorpresas.",
+    ubicacion: "Zona Misterio",
+    edad: "8+",
+    altura: "1.20m",
+    tiempo: "5 min",
+    horario: "11:00 - 21:00",
+    imagen: "images.jpg",
+    tipo: "Atracción Temática"
+  },
+  {
+    nombre: "Carrusel Mágico",
+    descripcion: "Un clásico carrusel con caballos de colores y música encantadora.",
+    ubicacion: "Zona Infantil",
+    edad: "Todas las edades",
+    altura: "Cualquier altura",
+    tiempo: "3 min",
+    horario: "09:00 - 20:00",
+    imagen: "36424110202_71dd1b07ef_b.jpg",
+    tipo: "Atracción Infantil"
+  },
+  {
+    nombre: "Torre del Terror",
+    descripcion: "Una caída libre desde 60 metros de altura.",
+    ubicacion: "Zona Adrenalina",
+    edad: "14+",
+    altura: "1.50m",
+    tiempo: "1 min",
+    horario: "10:30 - 22:30",
+    imagen: "tower-of-terror-disneyland-paris.jpeg",
+    tipo: "Caída Libre"
+  },
+  {
+    nombre: "Río Salvaje",
+    descripcion: "Un paseo en balsas por rápidos y cascadas.",
+    ubicacion: "Zona Acuática",
+    edad: "6+",
+    altura: "1.10m",
+    tiempo: "4 min",
+    horario: "10:00 - 21:00",
+    imagen: "images6.jpg",
+    tipo: "Atracción Acuática"
+  },
+  {
+    nombre: "Simulador Espacial",
+    descripcion: "Vive una experiencia intergaláctica en nuestro simulador de vuelo espacial.",
+    ubicacion: "Zona Futuro",
+    edad: "10+",
+    altura: "1.30m",
+    tiempo: "6 min",
+    horario: "12:00 - 23:00",
+    imagen: "maxresdefault.jpg",
+    tipo: "Simulador"
+  },
+  {
+    nombre: "Autos de Choque",
+    descripcion: "Compite con tus amigos en una pista de autos de choque.",
+    ubicacion: "Zona Familiar",
+    edad: "4+",
+    altura: "1.00m",
+    tiempo: "3 min",
+    horario: "09:30 - 21:30",
+    imagen: "images7).jpg",
+    tipo: "Atracción Mecánica"
+  },
+  {
+    nombre: "Túnel del Tiempo",
+    descripcion: "Viaja al pasado y al futuro en este túnel de efectos especiales.",
+    ubicacion: "Zona Misterio",
+    edad: "8+",
+    altura: "1.20m",
+    tiempo: "5 min",
+    horario: "11:00 - 20:00",
+    imagen: "image8.jpg",
+    tipo: "Atracción Temática"
+  },
+  {
+    nombre: "Vuelo del Dragón",
+    descripcion: "Una atracción suspendida que simula el vuelo de un dragón sobre el parque.",
+    ubicacion: "Zona Fantasía",
+    edad: "10+",
+    altura: "1.40m",
+    tiempo: "3 min",
+    horario: "10:00 - 22:00",
+    imagen: "image9.png",
+    tipo: "Atracción Aérea"
+  },
+  {
+    nombre: "Expedición Jurásica",
+    descripcion: "Un safari en vehículos por un mundo lleno de dinosaurios animatrónicos.",
+    ubicacion: "Zona Prehistórica",
+    edad: "6+",
+    altura: "1.10m",
+    tiempo: "7 min",
+    horario: "09:00 - 19:00",
+    imagen: "/images/expedicion-jurasica.jpg",
+    tipo: "Atracción Temática"
+  }
+  ];
+
+  const searchInput = document.getElementById('search');
+  const minAgeInput = document.getElementById('minAge');
+  const zoneSelect = document.getElementById('zone');
+  const attractionsContainer = document.getElementById('attractions-container');
+
+  function renderAttractions(filteredAttractions) {
+    attractionsContainer.innerHTML = '';
+    filteredAttractions.forEach(attraction => {
+      const attractionElement = document.createElement('div');
+      attractionElement.className = 'bg-white p-6 rounded-xl shadow-lg transition transform hover:scale-105 hover:shadow-xl';
+      attractionElement.innerHTML = `
+        <img src="${attraction.imagen}" alt="${attraction.nombre}" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="text-2xl font-bold mt-4 text-gray-800">${attraction.nombre}</h3>
+        <p class="text-gray-600 mt-2">${attraction.descripcion}</p>
+        <p class="text-gray-600 mt-2">Ubicación: ${attraction.ubicacion}</p>
+        <p class="text-gray-600 mt-2">Edad: ${attraction.edad}</p>
+        <p class="text-gray-600 mt-2">Altura: ${attraction.altura}</p>
+        <p class="text-gray-600 mt-2">Tiempo: ${attraction.tiempo}</p>
+        <p class="text-gray-600 mt-2">Horario: ${attraction.horario}</p>
+      `;
+      attractionsContainer.appendChild(attractionElement);
+    });
+  }
+
+  function filterAttractions() {
+    const search = searchInput.value.toLowerCase();
+    const minAge = parseInt(minAgeInput.value) || 0;
+    const zone = zoneSelect.value;
+
+    const filteredAttractions = attractions.filter(attraction => {
+      return (
+        attraction.nombre.toLowerCase().includes(search) &&
+        (minAge === 0 || parseInt(attraction.edad) >= minAge) &&
+        (zone === '' || attraction.ubicacion === zone)
+      );
+    });
+
+    renderAttractions(filteredAttractions);
+  }
+
+  searchInput.addEventListener('input', filterAttractions);
+  minAgeInput.addEventListener('input', filterAttractions);
+  zoneSelect.addEventListener('change', filterAttractions);
+
+  // Render all attractions on initial load
+  renderAttractions(attractions);
+</script>

@@ -1,0 +1,16 @@
+---
+const {title, text} = Astro.props
+---
+
+<div class="flex justify-center items-center py-5">
+    <div class="max-w-4xl w-full rounded-lg overflow-hidden shadow-xl bg-white p-8 transition-transform transform hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-100">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold text-[#ff7e5f] mb-6">{title}</h2>
+            <p class="text-gray-600 text-xl leading-relaxed">
+                {text}
+            </p>
+        </div>
+    </div>
+</div>
+
+
